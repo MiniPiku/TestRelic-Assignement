@@ -122,10 +122,27 @@ set `TESTRELIC_CLOUD_ENDPOINT` (or the `TESTRELIC_STAGE_*` vars) to override.
 ├── playwright.config.ts    # reporters: list + CTRF + TestRelic cloud upload
 ├── tests/
 │   ├── tool.spec.ts        # 6 tests (1 intentional failure)
-│   └── fixtures/           # deterministic CTRF JSON — no live network
+│   ├── fixtures/           # deterministic CTRF JSON — no live network
+│   │   ├── all-pass.json
+│   │   ├── flaky.json
+│   │   └── with-failure.json
+│   └── temp_fixtures/      # runtime-generated fixtures (gitignored)
+├── .github/
+│   └── workflows/
+│       └── ci.yml          # runs 5 passing tests + uploads to TestRelic
+├── .testrelic/             # TestRelic cloud config (endpoint + repo name)
+├── ctrf/                   # CTRF JSON output from test runs
 ├── docs/
-│   ├── problem.md          # placeholder
-│   └── scale.md            # placeholder
+│   ├── problem.md          # customer problem decomposition (Part 1)
+│   ├── scale.md            # scale brief (Part 4)
+│   ├── GitHub Actions CI Run/
+│   │   ├── CI run.png
+│   │   └── Github Actions job.png
+│   ├── MCP Query Screenshots/
+│   │   ├── NL prompt.png
+│   │   └── AI insight response.png
+│   └── TestRelic Dashboard Screenshots/
+│       └── Real ingested test results.png
 ├── package.json
 ├── tsconfig.json
 └── .env.example
@@ -133,5 +150,14 @@ set `TESTRELIC_CLOUD_ENDPOINT` (or the `TESTRELIC_STAGE_*` vars) to override.
 
 ## Screenshots
 
-- TestRelic dashboard (project `fde-assignment`): _<!-- paste screenshot link -->_
-- TestRelic MCP insight: _<!-- paste screenshot link -->_
+### TestRelic Dashboard
+![TestRelic Dashboard](docs/TestRelic%20Dashboard%20Screenshots/Real%20ingested%20test%20results.png)
+
+### MCP AI Insight
+![NL Prompt](docs/MCP%20Query%20Screenshots/NL%20prompt.png)
+![AI Insight Response](docs/MCP%20Query%20Screenshots/AI%20insight%20response.png)
+
+### GitHub Actions CI Run
+![CI Run](docs/GitHub%20Actions%20CI%20Run/CI%20run.png)
+![GitHub Actions Job](docs/GitHub%20Actions%20CI%20Run/Github%20Actions%20job.png)
+**Link:** https://github.com/MiniPiku/TestRelic-Assignement/actions/runs/28049526326/job/83036972762
