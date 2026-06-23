@@ -1,0 +1,104 @@
+{
+  "results": {
+    "tool": {
+      "name": "playwright"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1782188509057,
+      "stop": 1782188529991,
+      "suites": 0
+    },
+    "tests": [
+      {
+        "name": "Dashboard shows zero results when API key is invalid",
+        "status": "passed",
+        "duration": 3,
+        "start": 1782188529,
+        "stop": 1782188529,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "C:\\Users\\21par\\OneDrive\\Desktop\\take home\\TestRelic-assignment\\tests\\tool.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "suite": "tool.spec.ts"
+      },
+      {
+        "name": "1. Summary output — all pass",
+        "status": "passed",
+        "duration": 4028,
+        "start": 1782188510,
+        "stop": 1782188514,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "C:\\Users\\21par\\OneDrive\\Desktop\\take home\\TestRelic-assignment\\tests\\tool.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "suite": "tool.spec.ts > TestRelic CLI Tool Suite"
+      },
+      {
+        "name": "2. Summary output — with failure",
+        "status": "passed",
+        "duration": 3892,
+        "start": 1782188514,
+        "stop": 1782188518,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "C:\\Users\\21par\\OneDrive\\Desktop\\take home\\TestRelic-assignment\\tests\\tool.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "suite": "tool.spec.ts > TestRelic CLI Tool Suite"
+      },
+      {
+        "name": "3. Flakiness detection",
+        "status": "passed",
+        "duration": 4077,
+        "start": 1782188518,
+        "stop": 1782188522,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "C:\\Users\\21par\\OneDrive\\Desktop\\take home\\TestRelic-assignment\\tests\\tool.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "suite": "tool.spec.ts > TestRelic CLI Tool Suite"
+      },
+      {
+        "name": "4. Missing API key warning",
+        "status": "passed",
+        "duration": 3756,
+        "start": 1782188522,
+        "stop": 1782188526,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "C:\\Users\\21par\\OneDrive\\Desktop\\take home\\TestRelic-assignment\\tests\\tool.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "suite": "tool.spec.ts > TestRelic CLI Tool Suite"
+      },
+      {
+        "name": "5. Exit code — failure present",
+        "status": "passed",
+        "duration": 3728,
+        "start": 1782188526,
+        "stop": 1782188529,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "C:\\Users\\21par\\OneDrive\\Desktop\\take home\\TestRelic-assignment\\tests\\tool.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "suite": "tool.spec.ts > TestRelic CLI Tool Suite"
+      }
+    ]
+  }
+}

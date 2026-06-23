@@ -5,3 +5,6 @@ playwright-report/
 ctrf/
 .testrelic/cache/
 *.log
+
+# TestRelic test artifacts
+test-results/artifacts/

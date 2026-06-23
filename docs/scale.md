@@ -1,10 +1,3 @@
-# Scale
-
-_Placeholder — to be filled in._
-
-> Describe how this approach scales: more tests, more contributors, more repos,
-> CI volume, and how TestRelic cloud aggregation helps as the team grows.
-# Scale Brief
 **TestRelic FDE Intern Assignment · Part 4**
 
 ---
@@ -118,3 +111,7 @@ simply never uploads. A developer who doesn't know to look for this loses hours.
 
 **Proposed solution:** Add a config validation step to the reporter that runs
 at test startup — before any tests execute — and prints a clear message:
+TestRelic: config OK — cloud upload enabled (project: fde-assignment)
+OR
+TestRelic: WARNING — apiKey found at root level, expected under cloud: {}
+Results will not be uploaded. See docs.testrelic.ai/config

@@ -8,7 +8,7 @@
     "summary": "ts-node src/index.ts"
   },
   "dependencies": {
-    "@testrelic/playwright-analytics": "^2.7.0",
+    "@testrelic/playwright-analytics": "^2.10.0",
     "commander": "^12.1.0"
   },
   "devDependencies": {
