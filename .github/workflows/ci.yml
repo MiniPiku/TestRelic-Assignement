@@ -13,5 +13,6 @@ jobs:
           node-version: 18
       - run: npm install
       - run: npx playwright install --with-deps chromium
+      - run: npx playwright test
         env:
           TESTRELIC_API_KEY: ${{ secrets.TESTRELIC_API_KEY }}
