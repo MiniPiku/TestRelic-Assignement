@@ -12,6 +12,12 @@ that runs tests in CI but never reads the output. It:
 
 ---
 
+## 🎥 Demo
+
+[Watch the 3-minute walkthrough on Loom](https://www.loom.com/share/d185f31e95bd4e329da3c43dc5726dc2)
+
+---
+
 ## Prerequisites
 
 - **Node 18+** (developed on Node 22) and **npm**
