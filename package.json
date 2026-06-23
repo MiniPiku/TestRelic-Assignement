@@ -1,0 +1,22 @@
+{
+  "name": "testrelic-fde-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CLI that summarizes Playwright (CTRF) results in plain English and uploads them to TestRelic cloud.",
+  "scripts": {
+    "test": "playwright test",
+    "summary": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@testrelic/playwright-analytics": "^2.7.0",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.14.0",
+    "dotenv": "^16.4.5",
+    "playwright-ctrf-json-reporter": "^0.0.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0"
+  }
+}
