@@ -38,8 +38,8 @@ stay empty with the stock Playwright import.
 | TestRelic Dashboard Screenshot | [`docs/TestRelic Dashboard Screenshots/Real ingested test results.png`](docs/TestRelic%20Dashboard%20Screenshots/Real%20ingested%20test%20results.png) |
 | MCP Query Screenshots | [`docs/MCP Query Screenshots/NL prompt.png`](docs/MCP%20Query%20Screenshots/NL%20prompt.png) · [`docs/MCP Query Screenshots/AI insight response.png`](docs/MCP%20Query%20Screenshots/AI%20insight%20response.png) |
 | Scale Brief | [`docs/scale.md`](docs/scale.md) |
-| GitHub Actions CI Run | [View workflow run ↗](https://github.com/MiniPiku/TestRelic-Assignement/actions/runs/28055023993/job/83055064332) |
-| Demo Video | [Loom ↗](https://www.loom.com/share/d185f31e95bd4e329da3c43dc5726dc2) |
+| GitHub Actions CI Run | [View workflow run ↗](https://github.com/MiniPiku/TestRelic-Assignement/actions/runs/28083767077/job/83144615529) |
+| Demo Video | [Loom ↗](https://www.loom.com/share/86464a8c6f5a4775af392145603f4403)
 
 ---
 
@@ -169,4 +169,4 @@ set `TESTRELIC_CLOUD_ENDPOINT` (or the `TESTRELIC_STAGE_*` vars) to override.
 ### GitHub Actions CI Run
 ![CI Run](docs/GitHub%20Actions%20CI%20Run/CI%20run.png)
 ![GitHub Actions Job](docs/GitHub%20Actions%20CI%20Run/Github%20Actions%20job.png)
-**Link:** https://github.com/MiniPiku/TestRelic-Assignement/actions/runs/28055023993/job/83055064332
+**Link:** https://github.com/MiniPiku/TestRelic-Assignement/actions/runs/28083767077/job/83144615529
