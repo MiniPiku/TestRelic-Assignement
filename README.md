@@ -133,24 +133,6 @@ The project name shown in the dashboard comes from
 (`testrelic-repo.name = "fde-assignment"`). The endpoint defaults to production;
 set `TESTRELIC_CLOUD_ENDPOINT` (or the `TESTRELIC_STAGE_*` vars) to override.
 
-## Bot challenge
-
-Swiggy fronts the site with an Akamai-style bot challenge that serves a **blank
-HTTP 202** to vanilla headless Chromium (empty `<title>`, no DOM). To let the
-challenge resolve so the real SPA renders, [`playwright.config.ts`](playwright.config.ts)
-configures a realistic browser context — a real desktop Chrome **user agent**,
-**`en-IN` locale**, **`Asia/Kolkata` timezone**, a **1366×768 viewport**, an
-`Accept-Language` header, and `--disable-blink-features=AutomationControlled` —
-and each test masks `navigator.webdriver` via `page.addInitScript(...)` before
-navigating. With these in place the homepage, location autocomplete, restaurant
-listing, restaurant page, and cart all render and the suite runs **5 passed,
-1 failed** (the intentional failure).
-
-> The homepage restaurant grid is location-gated (it depends on the runner's IP),
-> so the **listing** and **restaurant-page** tests navigate to a city-specific
-> URL (`/city/bangalore`) that renders results regardless of where the runner is
-> — this keeps the suite green on non-India CI runners too.
-
 ## Project layout
 
 ```
