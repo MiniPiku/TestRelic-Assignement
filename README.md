@@ -18,6 +18,21 @@ that runs tests in CI but never reads the output. It:
 
 ---
 
+## 📦 Deliverables
+
+| Deliverable | Location |
+|---|---|
+| Problem Decomposition | [`docs/problem.md`](docs/problem.md) |
+| Working Tool (source + README) | [`src/`](src/) · [`playwright.config.ts`](playwright.config.ts) |
+| Playwright Test Suite (6 tests, 1 intentional failure) | [`tests/tool.spec.ts`](tests/tool.spec.ts) |
+| TestRelic Dashboard Screenshot | [`docs/TestRelic Dashboard Screenshots/Real ingested test results.png`](docs/TestRelic%20Dashboard%20Screenshots/Real%20ingested%20test%20results.png) |
+| MCP Query Screenshots | [`docs/MCP Query Screenshots/NL prompt.png`](docs/MCP%20Query%20Screenshots/NL%20prompt.png) · [`docs/MCP Query Screenshots/AI insight response.png`](docs/MCP%20Query%20Screenshots/AI%20insight%20response.png) |
+| Scale Brief | [`docs/scale.md`](docs/scale.md) |
+| GitHub Actions CI Run | [View passing workflow run ↗](https://github.com/MiniPiku/TestRelic-Assignement/actions/runs/28049526326/job/83036972762) |
+| Demo Video | [Loom ↗](https://www.loom.com/share/d185f31e95bd4e329da3c43dc5726dc2) |
+
+---
+
 ## Prerequisites
 
 - **Node 18+** (developed on Node 22) and **npm**
