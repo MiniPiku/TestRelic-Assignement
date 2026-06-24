@@ -103,15 +103,30 @@ failed."
 
 ## One Product Insight
 
-**Problem:** The biggest drop-off point in this assignment was not writing code
-— it was figuring out the correct reporter config structure. The `apiKey` must
-live inside a `cloud:` object, but nothing in the npm package README or the
-error output tells you this. The reporter loads silently with a flat config and
-simply never uploads. A developer who doesn't know to look for this loses hours.
+**Problem:** The dashboard is fully locked behind a boolean gate — a team
+cannot access any part of it until their first test run passes and the flag
+flips to `true`. This creates a forced dead zone at exactly the moment a new
+user is most likely to drop off. They've installed the SDK, configured it,
+and pushed — and the product gives them nothing to interact with while they
+wait. Developers are more likely to keep using tools they feel in control of.
+A blank, locked screen signals the opposite: that the product is in control,
+and they're waiting on it.
 
-**Proposed solution:** Add a config validation step to the reporter that runs
-at test startup — before any tests execute — and prints a clear message:
-TestRelic: config OK — cloud upload enabled (project: fde-assignment)
-OR
-TestRelic: WARNING — apiKey found at root level, expected under cloud: {}
-Results will not be uploaded. See docs.testrelic.ai/config
+**Proposed solution:** Unlock a read-only sandbox dashboard immediately on
+project creation — before any tests run — populated with realistic synthetic
+data from a fictional project. Let the user explore the AI query interface,
+browse a sample failure analysis, and click through flaky test flags. Every
+interactive element works; only the "your data" toggle is greyed out with a
+clear label: "Waiting for your first test run."
+
+This reframes the wait. Instead of staring at a lock, the user is learning
+the product. When their first upload arrives, the switch to real data feels
+like a reward, not a door finally being opened.
+
+**Evidence:** The drop-off pattern this solves is well-established: users who
+cannot interact with a product in the first session rarely return. The gate
+creates a cliff between Step 5 (push) and Step 6 (query) in the onboarding
+sequence — two steps that should feel continuous. A sandbox collapses that
+cliff. It also means `first_mcp_query` can fire during onboarding itself,
+not after — moving the activation threshold earlier and making the feedback
+loop tighter.
