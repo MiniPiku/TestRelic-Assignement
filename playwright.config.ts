@@ -22,6 +22,15 @@ export default defineConfig({
   timeout: 60_000,
   retries: 0,
   workers: 1,
+  // Capture artifacts for every test so the TestRelic dashboard populates its
+  // Video, Screenshots, and Trace columns. Console logs, Network Requests, and
+  // Nav Logs are captured by the @testrelic/playwright-analytics fixture (the
+  // tests import `test`/`expect` from '@testrelic/playwright-analytics/fixture').
+  use: {
+    video: 'on',
+    screenshot: 'on',
+    trace: 'on',
+  },
   reporter: [
     ['list'],
     // Emit a CTRF-compatible JSON file the CLI can summarize.
